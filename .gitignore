@@ -1,0 +1,13 @@
+# IDE configurations
+.vscode/
+.idea/
+
+# cache
+__pycache__/
+.pytest_cache/
+
+# virtual environment
+venv/
+
+# space-intensive data
+data/
