@@ -11,3 +11,5 @@ from src import types
 from src import data_pipe
 from src import voter
 from src import r_gans
+from src import loras
+from src import entropy_voter

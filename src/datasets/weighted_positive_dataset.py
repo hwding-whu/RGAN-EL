@@ -23,8 +23,8 @@ class WeightedPositiveDataset(PositiveDataset):
             for j, majority_item in enumerate(neg_samples):
                 dist[i][j] = torch.norm(minority_item - majority_item, p=2) + 1e-3
 
-        self.weights = 1 / dist.sum(axis=1, initial=None)
-        self.weights = self.weights / self.weights.sum()
+        self.fits = 1 / dist.sum(axis=1, initial=None)
+        self.weights = self.fits / self.fits.sum()
 
     def _get_weighted_samples(self, size: int) -> torch.Tensor:
         return torch.stack(
